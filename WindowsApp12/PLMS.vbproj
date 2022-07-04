@@ -1,0 +1,631 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{06F2B96E-ED0D-481D-A56A-F6FB56189C40}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>WindowsApp12.My.MyApplication</StartupObject>
+    <RootNamespace>WindowsApp12</RootNamespace>
+    <AssemblyName>PLMS</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>PLMS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>PLMS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI, Version=1.9.0.0, Culture=neutral, PublicKeyToken=ad275b4be6718d4b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Guna.UI-Framework-Lib-master\Guna.UI-Framework-Lib\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.18.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MySql.Data.DLL</HintPath>
+    </Reference>
+    <Reference Include="Renci.SshNet, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <HintPath>..\packages\SSH.NET.2016.1.0\lib\net40\Renci.SshNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Renci.SshNet.Async, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Renci.SshNet.Async.1.4.0\lib\net40\Renci.SshNet.Async.dll</HintPath>
+    </Reference>
+    <Reference Include="SshNet.Security.Cryptography, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SshNet.Security.Cryptography.1.3.0\lib\net45\SshNet.Security.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutProgram.Designer.vb">
+      <DependentUpon>AboutProgram.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AboutProgram.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_account.Designer.vb">
+      <DependentUpon>add_account.vb</DependentUpon>
+    </Compile>
+    <Compile Include="add_account.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Add_Courses.Designer.vb">
+      <DependentUpon>Add_Courses.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Add_Courses.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="attendance.Designer.vb">
+      <DependentUpon>attendance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="attendance.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="change_pass.Designer.vb">
+      <DependentUpon>change_pass.vb</DependentUpon>
+    </Compile>
+    <Compile Include="change_pass.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="db_user.Designer.vb">
+      <DependentUpon>db_user.vb</DependentUpon>
+    </Compile>
+    <Compile Include="db_user.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delete_Account.Designer.vb">
+      <DependentUpon>Delete_Account.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Delete_Account.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delete_Item.Designer.vb">
+      <DependentUpon>Delete_Item.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Delete_Item.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forgot_pass.Designer.vb">
+      <DependentUpon>forgot_pass.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forgot_pass.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="full_view_sched.Designer.vb">
+      <DependentUpon>full_view_sched.vb</DependentUpon>
+    </Compile>
+    <Compile Include="full_view_sched.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Journal_view.Designer.vb">
+      <DependentUpon>Journal_view.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Journal_view.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="login.Designer.vb">
+      <DependentUpon>login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageViewer.Designer.vb">
+      <DependentUpon>MessageViewer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MessageViewer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="New_Item.Designer.vb">
+      <DependentUpon>New_Item.vb</DependentUpon>
+    </Compile>
+    <Compile Include="New_Item.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="registerupdate.Designer.vb">
+      <DependentUpon>registerupdate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="registerupdate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="request_Item.Designer.vb">
+      <DependentUpon>request_Item.vb</DependentUpon>
+    </Compile>
+    <Compile Include="request_Item.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Error_message.Designer.vb">
+      <DependentUpon>Error_message.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Error_message.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.vb">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.vb">
+      <DependentUpon>Home.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Home.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Inventory.Designer.vb">
+      <DependentUpon>Inventory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="register_accounts.Designer.vb">
+      <DependentUpon>register_accounts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="register_accounts.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reservation.Designer.vb">
+      <DependentUpon>Reservation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reservation.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="reset_pass.Designer.vb">
+      <DependentUpon>reset_pass.vb</DependentUpon>
+    </Compile>
+    <Compile Include="reset_pass.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="security_code.Designer.vb">
+      <DependentUpon>security_code.vb</DependentUpon>
+    </Compile>
+    <Compile Include="security_code.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="server_db.Designer.vb">
+      <DependentUpon>server_db.vb</DependentUpon>
+    </Compile>
+    <Compile Include="server_db.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="splash_screen.Designer.vb">
+      <DependentUpon>splash_screen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="splash_screen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SQLConn.vb" />
+    <Compile Include="Success.Designer.vb">
+      <DependentUpon>Success.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Success.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Update_Item.Designer.vb">
+      <DependentUpon>Update_Item.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Update_Item.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AboutProgram.resx">
+      <DependentUpon>AboutProgram.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_account.resx">
+      <DependentUpon>add_account.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add_Courses.resx">
+      <DependentUpon>Add_Courses.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="attendance.resx">
+      <DependentUpon>attendance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="change_pass.resx">
+      <DependentUpon>change_pass.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="db_user.resx">
+      <DependentUpon>db_user.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delete_Account.resx">
+      <DependentUpon>Delete_Account.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delete_Item.resx">
+      <DependentUpon>Delete_Item.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forgot_pass.resx">
+      <DependentUpon>forgot_pass.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="full_view_sched.resx">
+      <DependentUpon>full_view_sched.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Journal_view.resx">
+      <DependentUpon>Journal_view.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageViewer.resx">
+      <DependentUpon>MessageViewer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="New_Item.resx">
+      <DependentUpon>New_Item.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="registerupdate.resx">
+      <DependentUpon>registerupdate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="request_Item.resx">
+      <DependentUpon>request_Item.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Error_message.resx">
+      <DependentUpon>Error_message.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory.resx">
+      <DependentUpon>Inventory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="register_accounts.resx">
+      <DependentUpon>register_accounts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reservation.resx">
+      <DependentUpon>Reservation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reset_pass.resx">
+      <DependentUpon>reset_pass.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="security_code.resx">
+      <DependentUpon>security_code.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="server_db.resx">
+      <DependentUpon>server_db.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="splash_screen.resx">
+      <DependentUpon>splash_screen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Success.resx">
+      <DependentUpon>Success.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Update_Item.resx">
+      <DependentUpon>Update_Item.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-chevron-right-52.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-expand-arrow-52 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-expand-arrow-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-chevron-right-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-chevron-left-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-property-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-property-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-opened-folder-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-speed-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-reservation-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-warehouse-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-warehouse-60.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-in-inventory-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-in-inventory-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-in-inventory-301.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-account-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-about-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-export-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-logout-rounded-up-35 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-export-351.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-logout-rounded-up-35 %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-logout-rounded-up-35 %281%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-ok-75.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-ok-80 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-ok-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-ok-1001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-ok-180.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-ok-150.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cancel-150.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cancel-110.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-ok-110.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-attendance-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-reservation-85.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-gitlab-85.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\220px-University_of_Mindanao_Logo %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\220px-University_of_Mindanao_Logo %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oie_3174553GLuQ0hcU.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oie_3174553GLuQ0hcU %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oie_3174553GLuQ0hcU1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oie_3174553GLuQ0hcU %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oie_3175043yQqehJwQ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oie_3175043yQqehJwQ %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oie_3175043yQqehJwQ %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\220px-University_of_Mindanao_Logo %281%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oie_3175043yQqehJwQ %281%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laboratory-science-chemistry-computer-lab-technology-science.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
+    <None Include="Resources\icons8-cancel-1501.png" />
+    <None Include="Resources\icons8-menu-35 %281%29.png" />
+    <None Include="Resources\icons8-journal-100.png" />
+    <None Include="Resources\icons8-news-100.png" />
+    <None Include="Resources\icons8-database-administrator-1002.png" />
+    <None Include="Resources\icons8-cancel-801.png" />
+    <None Include="Resources\icons8-physics-100.png" />
+    <None Include="Resources\android-marshmallow-boot-animation.gif" />
+    <None Include="Resources\source.gif" />
+    <None Include="Resources\process.png" />
+    <None Include="Resources\icons8-account-100 %281%29.png" />
+    <None Include="Resources\icons8-add-shopping-cart-100 %281%291.png" />
+    <None Include="Resources\icons8-update-100.png" />
+    <None Include="Resources\istockphoto-485169533-612x612.jpg" />
+    <None Include="Resources\dcdcd2481b30c9bce2cd52a45ac2b8791.jpg" />
+    <None Include="Resources\dcdcd2481b30c9bce2cd52a45ac2b879.jpg" />
+    <None Include="Resources\icons8-add-shopping-cart-100 %281%29.png" />
+    <None Include="Resources\icons8-male-user-100 %281%29.png" />
+    <None Include="Resources\icons8-logout-rounded-left-100 %281%29.png" />
+    <None Include="Resources\icons8-exit-100.png" />
+    <None Include="Resources\icons8-database-administrator-1001.png" />
+    <None Include="Resources\icons8-database-administrator-100.png" />
+    <None Include="Resources\icons8-admin-settings-male-100.png" />
+    <None Include="Resources\icons8-change-user-100.png" />
+    <None Include="Resources\icons8-forgot-password-100.png" />
+    <None Include="Resources\icons8-male-user-100.png" />
+    <None Include="Resources\icons8-science-application-100 %282%292.png" />
+    <None Include="Resources\icons8-science-application-100 %283%29.png" />
+    <None Include="Resources\icons8-science-application-100 %282%291.png" />
+    <None Include="Resources\icons8-system-task-100.png" />
+    <None Include="Resources\icons8-thermometer-automation-100.png" />
+    <None Include="Resources\icons8-science-application-100 %282%29.png" />
+    <None Include="Resources\icons8-science-application-100 %281%29.png" />
+    <None Include="Resources\icons8-menu-30.png" />
+    <None Include="Resources\icons8-key-100.png" />
+    <None Include="Resources\icons8-cancel-80.png" />
+    <None Include="Resources\Webp.net-resizeimage %282%293.png" />
+    <None Include="Resources\icons8-minus-40 %281%29.png" />
+    <None Include="Resources\icons8-minus-401.png" />
+    <None Include="Resources\icons8-minus-40.png" />
+    <None Include="Resources\icons8-plus-math-40 %281%29.png" />
+    <None Include="Resources\icons8-plus-math-30.png" />
+    <None Include="Resources\icons8-plus-24.png" />
+    <None Include="Resources\Webp.net-resizeimage %282%292.png" />
+    <None Include="Resources\Webp.net-resizeimage %282%291.png" />
+    <None Include="Resources\Webp.net-resizeimage %282%29.png" />
+    <None Include="Resources\Webp.net-resizeimage %281%291.png" />
+    <None Include="Resources\Webp.net-resizeimage %281%29.png" />
+    <None Include="Resources\Webp.net-resizeimage.png" />
+    <None Include="Resources\oie_3175043yQqehJwQ %281%293.png" />
+    <None Include="Resources\oie_3174553GLuQ0hcU2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>

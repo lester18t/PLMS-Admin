@@ -1,0 +1,37 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="Server" Type="System.String" Scope="User">
+      <Value Profile="(Default)">localhost</Value>
+    </Setting>
+    <Setting Name="User" Type="System.String" Scope="User">
+      <Value Profile="(Default)">root</Value>
+    </Setting>
+    <Setting Name="Pass" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Programs" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;001 Arc - Architecture&lt;/string&gt;
+  &lt;string&gt;002 CS - Computer Science&lt;/string&gt;
+  &lt;string&gt;002 IT - Information Technolgy&lt;/string&gt;
+  &lt;string&gt;003 ChE - Chemical Engineering&lt;/string&gt;
+  &lt;string&gt;003 CE - Civil Engineering&lt;/string&gt;
+  &lt;string&gt;003 CpE - Computer Engineering&lt;/string&gt;
+  &lt;string&gt;003 EE - Electrical Engineering&lt;/string&gt;
+  &lt;string&gt;003 ECE - Electronics Engineering&lt;/string&gt;
+  &lt;string&gt;003 ME - Mechanical Engineering&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="Colleges" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;001 CAFAE - Architecture  Education&lt;/string&gt;
+  &lt;string&gt;002 CCE - Computing Education&lt;/string&gt;
+  &lt;string&gt;003 CEE - Engineering Education&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
